@@ -30,7 +30,7 @@ Simpan semua file tangkapan layar (screenshot) di dalam folder `screenshots/` de
 ## Struktur Folder
 
 ```text
-Lab2Web/
+ Lab2Web/praktikum-2-lanjutan-html/
 ├── index.html
 ├── index1.html
 ├── biodata.html
@@ -106,7 +106,7 @@ Menjelaskan struktur dasar tabel HTML menggunakan tag `<table>`, `<tr>` (baris),
 
 **Capture Output:**
 
-> ![Output Tabel Data Mahasiswa](./screenshots/1.png)
+> ![Output Tabel Data Mahasiswa](./praktikum-2-lanjutan-html/screenshots/1.png)
 
 ---
 
@@ -164,7 +164,7 @@ Menjelaskan pengelompokan elemen tabel secara lebih terstruktur:
 
 **Capture Output:**
 
-> ![Output Form Registrasi](./screenshots/2.png)
+> ![Output Form Registrasi](./praktikum-2-lanjutan-html/screenshots/2.png)
 
 ---
 
@@ -192,7 +192,7 @@ Menjelaskan penggunaan tag `<form>` sebagai wadah untuk mengumpulkan input dari 
 
 **Capture Output:**
 
-> ![Output Radio dan Checkbox](./screenshots/3.png)
+> ![Output Radio dan Checkbox](./praktikum-2-lanjutan-html/screenshots/3.png)
 
 ---
 
@@ -223,7 +223,7 @@ Checkbox `(type="checkbox")`: Digunakan untuk memilih satu atau lebih opsi secar
 
 **Capture Output:**
 
-> ![Output Select dan Textarea](./screenshots/4.png)
+> ![Output Select dan Textarea](./praktikum-2-lanjutan-html/screenshots/4.png)
 
 ---
 
@@ -252,7 +252,7 @@ Menjelaskan jenis input pilihan tingkat lanjut dan teks panjang:
 
 **Capture Output:**
 
-> ![Output Validasi Form](./screenshots/5.png)
+> ![Output Validasi Form](./praktikum-2-lanjutan-html/screenshots/5.png)
 
 ---
 
@@ -281,7 +281,7 @@ Menjelaskan penggunaan atribut bawaan HTML5 untuk memvalidasi isian pengguna seb
 
 **Capture Output:**
 
-> ![Output Semantic HTML](./screenshots/6.png)
+> ![Output Semantic HTML](./praktikum-2-lanjutan-html/screenshots/6.png)
 
 ---
 
@@ -339,7 +339,7 @@ Berikut adalah penjelasan fungsi dari setiap tag Semantic HTML yang digunakan
 
 **Capture Output:**
 
-> ![Output Multimedia Audio & Video](./screenshots/7.png)
+> ![Output Multimedia Audio & Video](./praktikum-2-lanjutan-html/screenshots/7.png)
 
 ---
 
@@ -364,7 +364,7 @@ Menjelaskan cara menampilkan media suara dan video pada halaman web menggunakan 
 
 **Capture Output:**
 
-> ![Output Proyek Mini Biodata](./screenshots/8.png)
+> ![Output Proyek Mini Biodata](./praktikum-2-lanjutan-html/screenshots/8.png)
 
 ---
 
@@ -429,6 +429,11 @@ Menjelaskan cara menampilkan media suara dan video pada halaman web menggunakan 
 </html>
 
 ```
+**Capture Output:**
+
+> ![Output Proyek Mini Biodata](./praktikum-2-lanjutan-html/screenshots/9.png)
+
+---
 
 ## Jawaban Pertanyaan
 
