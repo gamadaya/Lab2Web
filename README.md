@@ -16,15 +16,15 @@ Simpan semua file tangkapan layar (screenshot) di dalam folder `screenshots/` de
 
 | No File | Aplikasi / Lokasi | Yang Harus Di-Screenshot |
 |---|---|---|
-| **`ss1.png`** | Browser | Tampilan tabel data mahasiswa dan nilai dengan `<thead>`, `<tbody>`, `<tfoot>`, serta penggunaan `colspan`. |
-| **`ss2.png`** | Browser | Tampilan Form Registrasi Mahasiswa (Input Teks, Email, Password, Date). |
-| **`ss3.png`** | Browser | Tampilan elemen Pilihan (Radio Button Jenis Kelamin & Checkbox Keahlian). |
-| **`ss4.png`** | Browser | Tampilan elemen Dropdown (`<select>`) dan Input Teks Area (`<textarea>`). |
-| **`ss5.png`** | Browser | Tampilan pesan peringatan/pop-up validasi HTML5 saat form dikirim kosong (`required`). |
-| **`ss6.png`** | Browser | Tampilan layout struktur halaman web berbasis Semantic HTML. |
-| **`ss7.png`** | Browser | Tampilan pemutar Multimedia (Elemen `<audio>` dan `<video>`). |
-| **`ss8.png`** | Browser | Tampilan Proyek Mini (`biodata.html`) yang menggabungkan Semantic HTML, Tabel, Form, dan Multimedia. |
-
+| **`1.png`** | Browser | 1. Tampilan tabel data mahasiswa. |
+| **`2.png`** | Browser | 2. Tampilan Tabel dengan `<thead>`, `<tbody,>` dan `<tfoot.>` |
+| **`3.png`** | Browser | 3. Tampilan Membuat Form Registrasi Mahasiswa. |
+| **`4.png`** | Browser | 4. Tampilan elemen Radio Button dan Checkbox. |
+| **`5.png`** | Browser | 5. Tampilan Select dan Textarea. |
+| **`6.png`** | Browser | 6. Tampilan Validasi Form Dasar. |
+| **`7.png`** | Browser | 7. Tampilan Halaman Semantic HTML. |
+| **`8.png`** | Browser | 8. Tampilan Menambahkan Multimedia. |
+| **`9.png`** | Browser | 9. Tampilan Proyek Mini — Form Biodata Mahasiswa |
 ---
 
 ## Struktur Folder
@@ -37,14 +37,14 @@ Lab2Web/
 │   ├── audio.mp3
 │   └── video.mp4
 ├── screenshots/
-│   ├── ss1.png
-│   ├── ss2.png
-│   ├── ss3.png
-│   ├── ss4.png
-│   ├── ss5.png
-│   ├── ss6.png
-│   ├── ss7.png
-│   └── ss8.png
+│   ├── 1.png
+│   ├── 2.png
+│   ├── 3.png
+│   ├── 4.png
+│   ├── 5.png
+│   ├── 6.png
+│   ├── 7.png
+│   └── 8.png
 └── README.md
 ```
 
@@ -63,54 +63,54 @@ Lab2Web/
 ---
 
 ## Implementasi Kode & Dokumentasi
+1. Membuat Tabel Data Mahasiswa
+Berikut adalah penjelasan ringkas fungsi masing-masing tag HTML di bawah:
 
-### 1. Tabel HTML & Struktur Kompleks
-
-**Penjelasan Konseptual:**
-Tabel digunakan untuk mengelompokkan data berulang. Struktur `<thead>`, `<tbody>`, dan `<tfoot>` memisahkan bagian-bagian tabel secara semantik. Atribut `colspan` digunakan untuk menggabungkan dua atau lebih kolom dalam satu baris.
+* **`<!-- ... -->`** : Menulis catatan atau komentar pada kode yang tidak akan diproses oleh browser.
+* **`<h1>`** : Membuat judul utama atau tingkat paling tinggi pada halaman web.
+* **`<table>`** : Membentuk dan membungkus seluruh elemen tabel pada dokumen HTML.
+* **`<tr>`** : Menandai pembuatan satu baris baru di dalam tabel.
+* **`<th>`** : Menampilkan sel sebagai judul kolom dengan cetak tebal dan posisi rata tengah secara otomatis.
+* **`<td>`** : Menyimpan data atau isi konten biasa di dalam sel tabel.
 
 **Input Code:**
 
 ```html
-<!-- 1. Tabel Data & Nilai Mahasiswa -->
-<table border="1">
-    <caption>Data & Nilai Praktikum Mahasiswa</caption>
-    <thead>
+ <!-- Tabel Data Mahasiswa -->
+
+    <h1>Data Mahasiswa</h1>
+    <table border="1">
         <tr>
-            <th>NIM</th>
             <th>Nama</th>
-            <th>Nilai</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>312510051</td>
-            <td>Gama Daya Laksana</td>
-            <td>95</td>
+            <th>NIM</th>
+            <th>Program Studi</th>
+            <th>Alamat</th>
         </tr>
         <tr>
-            <td>31241001</td>
-            <td>Andi</td>
-            <td>85</td>
+            <td>Gama</td>
+            <td>3123456</td>
+            <td>Teknik Informatika</td>
+            <td>Jakarta</td>
         </tr>
         <tr>
-            <td>31241002</td>
-            <td>Budi</td>
-            <td>90</td>
+            <td>Salsa</td>
+            <td>3123457</td>
+            <td>Teknik Informatika</td>
+            <td>Bandung</td>
         </tr>
-    </tbody>
-    <tfoot>
         <tr>
-            <td colspan="2">Rata-rata Nilai</td>
-            <td>90.0</td>
+            <td>Rizky</td>
+            <td>3123458</td>
+            <td>Teknik Informatika</td>
+            <td>Surabaya</td>
         </tr>
-    </tfoot>
-</table>
+
+    </table>
 ```
 
 **Capture Output:**
 
-> ![Output Tabel Data Mahasiswa](./screenshots/ss1.png)
+> ![Output Tabel Data Mahasiswa](./screenshots/1.png)
 
 ---
 
