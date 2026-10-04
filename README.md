@@ -12,7 +12,7 @@
 
 ## Panduan Screenshot Tugas
 
-Simpan semua file tangkapan layar (screenshot) di dalam folder `screenshots/` dengan format nama angka (`ss1.png` sampai `ss8.png`) sesuai tabel berikut:
+Simpan semua file tangkapan layar (screenshot) di dalam folder `screenshots/` dengan format nama angka (`1.png` sampai `8.png`) sesuai tabel berikut:
 
 | No File | Aplikasi / Lokasi | Yang Harus Di-Screenshot |
 |---|---|---|
@@ -32,6 +32,7 @@ Simpan semua file tangkapan layar (screenshot) di dalam folder `screenshots/` de
 ```text
 Lab2Web/
 ├── index.html
+├── index1.html
 ├── biodata.html
 ├── media/
 │   ├── audio.mp3
@@ -63,15 +64,10 @@ Lab2Web/
 ---
 
 ## Implementasi Kode & Dokumentasi
-1. Membuat Tabel Data Mahasiswa
-Berikut adalah penjelasan ringkas fungsi masing-masing tag HTML di bawah:
 
-* **`<!-- ... -->`** : Menulis catatan atau komentar pada kode yang tidak akan diproses oleh browser.
-* **`<h1>`** : Membuat judul utama atau tingkat paling tinggi pada halaman web.
-* **`<table>`** : Membentuk dan membungkus seluruh elemen tabel pada dokumen HTML.
-* **`<tr>`** : Menandai pembuatan satu baris baru di dalam tabel.
-* **`<th>`** : Menampilkan sel sebagai judul kolom dengan cetak tebal dan posisi rata tengah secara otomatis.
-* **`<td>`** : Menyimpan data atau isi konten biasa di dalam sel tabel.
+### 1. Tabel Data Mahasiswa
+
+Menjelaskan struktur dasar tabel HTML menggunakan tag `<table>`, `<tr>` (baris), `<th>` (header kolom), dan `<td>` (sel data). Elemen ini digunakan untuk menyajikan informasi berupa data mahasiswa secara rapi dalam format kolom dan baris.
 
 **Input Code:**
 
@@ -114,152 +110,215 @@ Berikut adalah penjelasan ringkas fungsi masing-masing tag HTML di bawah:
 
 ---
 
-### 2. Form Registrasi Mahasiswa
+### 2. Mengembangkan Tabel dengan Caption, Thead, Tbody, dan Tfoot
 
-**Penjelasan Konseptual:**
-Tag `<form>` berfungsi sebagai wadah untuk menampung berbagai tipe kontrol input. Atribut `type` menentukan perilaku dan tampilan dari tag `<input>` (misalnya `text`, `email`, `password`, dan `date`).
+Menjelaskan pengelompokan elemen tabel secara lebih terstruktur:
+
+`<caption>`: Memberikan judul atau deskripsi tabel.
+
+`<thead>`: Membungkus bagian baris header tabel.
+
+`<tbody>`: Membungkus konten utama dari data tabel.
+
+`<tfoot>`: Membungkus baris ringkasan atau total di bagian bawah tabel.
 
 **Input Code:**
 
 ```html
-<!-- 2. Form Registrasi Dasar -->
-<h1>Form Registrasi Mahasiswa</h1>
-<form>
-    <label for="nama">Nama Lengkap:</label><br>
-    <input type="text" id="nama" name="nama"><br><br>
+<!-- 2. Mengembangkan Tabel dengan Caption, Thead, Tbody, dan Tfoot -->
 
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email"><br><br>
-
-    <label for="password">Password:</label><br>
-    <input type="password" id="password" name="password"><br><br>
-
-    <label for="tanggal">Tanggal Lahir:</label><br>
-    <input type="date" id="tanggal" name="tanggal"><br><br>
-
-    <button type="submit">Daftar</button>
-    <button type="reset">Reset</button>
-</form>
+    <table border="1">
+        <br>
+        <caption>Nilai Praktikum</caption>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Nilai</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Gama Daya Laksana</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Budi Santoso</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Siti Aminah</td>
+                <td>88</td>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Rata-rata</td>
+                <td>87.5</td>
+            </tr>
+        </tfoot>
+    </table>
 ```
 
 **Capture Output:**
 
-> ![Output Form Registrasi](./screenshots/ss2.png)
+> ![Output Form Registrasi](./screenshots/2.png)
 
 ---
 
-### 3. Pilihan Pilihan: Radio Button & Checkbox
+### 3. 3. Membuat Form Registrasi Mahasiswa
 
-**Penjelasan Konseptual:**
-Input tipe `radio` digunakan ketika pengguna hanya boleh memilih **satu** opsi dari kelompok pilihan yang memiliki nama atribut (`name`) yang sama. Sedangkan `checkbox` mengizinkan pengguna memilih **satu atau lebih** opsi secara independen.
-
+Menjelaskan penggunaan tag `<form>` sebagai wadah untuk mengumpulkan input dari pengguna. Poin ini mengenalkan elemen `<label>` sebagai petunjuk input, tag `<input>` dengan berbagai tipe (text, email, password, date), serta tombol `<button>` untuk mengirim (submit) atau mengosongkan (reset) isi formulir.
 **Input Code:**
 
 ```html
-<!-- 3. Radio Button dan Checkbox -->
-<h2>Jenis Kelamin</h2>
-<input type="radio" id="laki" name="jk" value="L">
-<label for="laki">Laki-laki</label>
-<input type="radio" id="perempuan" name="jk" value="P">
-<label for="perempuan">Perempuan</label>
-
-<h2>Keahlian</h2>
-<input type="checkbox" id="html" name="skill" value="HTML">
-<label for="html">HTML</label>
-<input type="checkbox" id="css" name="skill" value="CSS">
-<label for="css">CSS</label>
-<input type="checkbox" id="js" name="skill" value="JavaScript">
-<label for="js">JavaScript</label>
+ <!-- 3. Membuat Form Registrasi Mahasiswa -->
+    <h1>Form Registrasi Mahasiswa</h1>
+    <form>
+        <label for="nama">Nama Lengkap</label><br>
+        <input type="text" id="nama" name="nama"><br><br>
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="password">Password</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <label for="tanggal">Tanggal Lahir</label><br>
+        <input type="date" id="tanggal" name="tanggal"><br><br>
+        <button type="submit">Daftar</button>
+        <button type="reset">Reset</button>
+    </form>
 ```
 
 **Capture Output:**
 
-> ![Output Radio dan Checkbox](./screenshots/ss3.png)
+> ![Output Radio dan Checkbox](./screenshots/3.png)
 
 ---
 
-### 4. Dropdown List (`<select>`) & Textarea
+### 4. Radio Button dan Checkbox
 
-**Penjelasan Konseptual:**
-Tag `<select>` membuat menu *dropdown* berisi opsi-opsi yang didefinisikan oleh tag `<option>`. Tag `<textarea>` digunakan untuk menginputkan teks multibaris yang panjang, seperti masukan alamat atau uraian deskripsi.
+Menjelaskan pembuatan pilihan opsi pada form:
 
+Radio Button `(type="radio")`: Digunakan untuk memilih satu opsi dari beberapa pilihan yang saling eksklusif (misalnya jenis kelamin L/P).
+
+Checkbox `(type="checkbox")`: Digunakan untuk memilih satu atau lebih opsi secara bebas (misalnya pilihan keahlian/skill).
 **Input Code:**
 
 ```html
-<!-- 4. Select dan Textarea -->
-<label for="prodi">Program Studi:</label>
-<select id="prodi" name="prodi">
-    <option value="">-- Pilih Prodi --</option>
-    <option value="ti">Teknik Informatika</option>
-    <option value="si">Sistem Informasi</option>
-</select>
-<br><br>
-
-<label for="alamat">Alamat Lengkap:</label><br>
-<textarea id="alamat" name="alamat" rows="5" cols="40"></textarea>
+ <!-- 4. Radio Button dan Checkbox -->
+    <h2>Jenis Kelamin</h2>
+    <input type="radio" id="laki" name="jk" value="L">
+    <label for="laki">Laki-laki</label>
+    <input type="radio" id="perempuan" name="jk" value="P">
+    <label for="perempuan">Perempuan</label>
+    <h2>Keahlian</h2>
+    <input type="checkbox" id="html" name="skill" value="HTML">
+    <label for="html">HTML</label>
+    <input type="checkbox" id="css" name="skill" value="CSS">
+    <label for="css">CSS</label>
+    <input type="checkbox" id="js" name="skill" value="JavaScript">
+    <label for="js">JavaScript</label>
 ```
 
 **Capture Output:**
 
-> ![Output Select dan Textarea](./screenshots/ss4.png)
+> ![Output Select dan Textarea](./screenshots/4.png)
 
 ---
 
-### 5. Validasi Form Dasar HTML5
+### 5. Select dan Text Area
 
-**Penjelasan Konseptual:**
-Atribut validasi seperti `required` memaksa pengguna untuk mengisi field sebelum dikirim. Atribut `minlength`, `maxlength`, `min`, dan `max` membatasi rentang nilai atau panjang karakter yang dimasukkan.
+Menjelaskan jenis input pilihan tingkat lanjut dan teks panjang:
 
+`<select>` & `<option>`: Membuat menu drop-down untuk memilih opsi dalam daftar terbatas (misalnya program studi).
+
+`<textarea>`: Menyediakan kolom input teks multibaris untuk menampung teks yang panjang (misalnya input alamat).
 **Input Code:**
 
 ```html
-<!-- 5. Form dengan Validasi HTML5 -->
-<form>
-    <label for="nama_val">Nama:</label>
-    <input type="text" id="nama_val" name="nama" required minlength="3"><br><br>
-
-    <label for="email_val">Email:</label>
-    <input type="email" id="email_val" name="email" required><br><br>
-
-    <label for="umur_val">Umur:</label>
-    <input type="number" id="umur_val" name="umur" min="17" max="60" required><br><br>
-
-    <button type="submit">Kirim Data</button>
-</form>
+ <!-- 5. Select Dan Text Area-->
+    <br><br>
+    <label for="prodi">Program Studi</label>
+    <select id="prodi" name="prodi">
+        <option value="">-- Pilih Prodi --</option>
+        <option value="ti">Teknik Informatika</option>
+        <option value="si">Sistem Informasi</option>
+    </select>
+    <br><br>
+    <label for="alamat">Alamat</label><br>
+    <textarea id="alamat" name="alamat" rows="5" cols="40"></textarea>
 ```
 
 **Capture Output:**
 
-> ![Output Validasi Form](./screenshots/ss5.png)
+> ![Output Validasi Form](./screenshots/5.png)
 
 ---
 
-### 6. Struktur Layout Semantic HTML
+### 6. Validasi Form Dasar
 
-**Penjelasan Konseptual:**
-Penggunaan elemen semantik seperti `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, dan `<footer>` memperjelas peranan visual maupun fungsional dari blok dokumen web.
+Menjelaskan penggunaan atribut bawaan HTML5 untuk memvalidasi isian pengguna sebelum dikirim ke server tanpa menggunakan JavaScript. Contohnya atribut required (wajib diisi), minlength (panjang karakter minimum), serta min dan max untuk batasan nilai angka.
 
 **Input Code:**
 
 ```html
-<!-- 6. Layout Halaman Semantic -->
+ <!-- 6. Validasi Form Dasar-->
+    <form>
+        <br>
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" name="nama" required minlength="3">
+        <br>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="umur">Umur</label>
+        <input type="number" id="umur" name="umur" min="17" max="60" required>
+        <br>
+        <button type="submit">Kirim</button>
+    </form>
+```
+
+**Capture Output:**
+
+> ![Output Semantic HTML](./screenshots/6.png)
+
+---
+
+### 7. Membuat Halaman Semantic HTML
+
+Berikut adalah penjelasan fungsi dari setiap tag Semantic HTML yang digunakan
+
+`<header>` : Menandai bagian kepala atau koping (header) dari halaman web. Biasanya berisi judul utama web, logo, atau deskripsi singkat halaman.
+
+`<nav>` (Navigation) : Membungkus kumpulan link navigasi utama (seperti Beranda, Profil, Kontak) untuk membantu pengguna dan mesin pencari mengenali struktur menu situs.
+
+`<main>` : Menandai area konten utama yang unik dan paling penting dari dokumen HTML. Dalam satu halaman hanya boleh ada satu elemen `<main>`.
+
+`<section>` : Mengelompokkan konten yang memiliki tema atau topik pembahasan yang sama (dalam contoh ini: grup "Informasi Akademik").
+
+`<article>` : Membungkus konten mandiri yang memiliki arti utuh, seperti artikel berita, postingan blog, atau pengumuman (dalam contoh ini: pengumuman "Praktikum HTML Lanjutan").
+
+`<aside>` : Menampung konten sampingan atau informasi tambahan yang sifatnya melengkapi konten utama (seperti sidebar, iklan, atau tautan terkait).
+
+`<footer>` : Menandai bagian kaki halaman web. Biasanya berisi informasi hak cipta (&copy;), kontak pengembang, atau tautan kebijakan privasi.
+**Input Code:**
+
+```html
+<!--7. Membuat Halaman Semantic HTML -->
+
 <!DOCTYPE html>
-<html lang="id">
+<html>
+
 <head>
-    <meta charset="UTF-8">
     <title>Portal Mahasiswa</title>
 </head>
+
 <body>
     <header>
-        <h1>Portal Mahasiswa Universitas Pelita Bangsa</h1>
+        <h1>Portal Mahasiswa</h1>
     </header>
-
-    <nav>
-        <a href="#">Beranda</a> |
-        <a href="#">Profil</a> |
-        <a href="#">Kontak</a>
-    </nav>
-
+    <nav> <a href="#">Beranda</a> <a href="#">Profil</a> <a href="#">Kontak</a> </nav>
     <main>
         <section>
             <h2>Informasi Akademik</h2>
@@ -268,86 +327,69 @@ Penggunaan elemen semantik seperti `<header>`, `<nav>`, `<main>`, `<section>`, `
                 <p>Mahasiswa mempelajari tabel, form, semantic HTML, multimedia, dan validasi.</p>
             </article>
         </section>
-
-        <aside>
-            <h4>Informasi Tambahan</h4>
-            <p>Jadwal ujian akan diumumkan minggu depan.</p>
-        </aside>
+        <aside>Informasi tambahan mahasiswa.</aside>
     </main>
-
     <footer>
-        <p>&copy; 2026 Teknik Informatika - Universitas Pelita Bangsa</p>
+        <p>&copy; 2026 Teknik Informatika</p>
     </footer>
 </body>
+
 </html>
 ```
 
 **Capture Output:**
 
-> ![Output Semantic HTML](./screenshots/ss6.png)
+> ![Output Multimedia Audio & Video](./screenshots/7.png)
 
 ---
 
-### 7. Integrasi Multimedia (`<audio>` & `<video>`)
+### 8. Menambahkan Multimedia
 
-**Penjelasan Konseptual:**
-Elemen `<audio>` dan `<video>` menyematkan berkas media secara langsung. Atribut `controls` menambahkan bilah navigasi pemutar seperti tombol *play*, *pause*, dan *volume*.
-
+Menjelaskan cara menampilkan media suara dan video pada halaman web menggunakan tag `<audio>` dan `<video>`. Atribut controls digunakan untuk memunculkan tombol pemutar (play, pause, volume), sedangkan tag <source> menentukan lokasi serta format file media tersebut.
 **Input Code:**
 
 ```html
-<!-- 7. Elemen Multimedia -->
-<h2>Pemutar Audio</h2>
-<audio controls>
-    <source src="media/audio.mp3" type="audio/mpeg">
-    Browser Anda tidak mendukung pemutar audio.
-</audio>
-
-<h2>Pemutar Video</h2>
-<video controls width="480">
-    <source src="media/video.mp4" type="video/mp4">
-    Browser Anda tidak mendukung pemutar video.
-</video>
+ <!-- 8. Menambahkan Multimedia-->
+    <h2>Audio</h2>
+    <audio controls>
+        <source src="media/audio.mp3" type="audio/mpeg">
+        Browser tidak mendukung audio.
+    </audio>
+    <h2>Video</h2>
+    <video controls width="480">
+        <source src="media/video.mp4" type="video/mp4">
+        Browser tidak mendukung video.
+    </video>
 ```
 
 **Capture Output:**
 
-> ![Output Multimedia Audio & Video](./screenshots/ss7.png)
+> ![Output Proyek Mini Biodata](./screenshots/8.png)
 
 ---
 
-### 8. Proyek Mini: Halaman Biodata Mahasiswa (`biodata.html`)
-
-**Penjelasan Konseptual:**
-Penerapan menyeluruh dari konsep *Semantic Structure*, *Tabel Data*, *Form Input Validasi*, dan *Multimedia* dalam satu kesatuan file halaman web (`biodata.html`).
-
-**Input Code (`biodata.html`):**
-
+## 9. Projek Mini Biodata Mahasiswa
 ```html
 <!DOCTYPE html>
-<html lang="id">
+<html>
+
+
+<!--Projek Mini Form Biodata Mahasiswa -->
 <head>
-    <meta charset="UTF-8">
-    <title>Biodata Mahasiswa - Proyek Mini</title>
+    <title>Biodata Mahasiswa</title>
 </head>
+
 <body>
     <header>
         <h1>Biodata Mahasiswa</h1>
     </header>
-
-    <nav>
-        <a href="index.html">Beranda</a> |
-        <a href="#biodata">Biodata</a> |
-        <a href="#form">Form Mini</a> |
-        <a href="#media">Media</a>
-    </nav>
-
+    <nav> <a href="index.html">Beranda</a> <a href="#biodata">Biodata</a> <a href="#form">Form</a> </nav>
     <main>
         <section id="biodata">
-            <h2>Data Pribadi</h2>
+            <h2>Data Mahasiswa</h2>
             <table border="1">
                 <tr>
-                    <th>Atribut</th>
+                    <th>Data</th>
                     <th>Keterangan</th>
                 </tr>
                 <tr>
@@ -364,99 +406,109 @@ Penerapan menyeluruh dari konsep *Semantic Structure*, *Tabel Data*, *Form Input
                 </tr>
             </table>
         </section>
-
         <section id="form">
-            <h2>Form Update Biodata</h2>
-            <form>
-                <label for="nama_mhs">Nama Lengkap:</label><br>
-                <input type="text" id="nama_mhs" name="nama" required><br><br>
-
-                <label for="email_mhs">Email:</label><br>
-                <input type="email" id="email_mhs" name="email" required><br><br>
-
-                <label for="prodi_mhs">Program Studi:</label><br>
-                <select id="prodi_mhs" name="prodi" required>
-                    <option value="">-- Pilih Prodi --</option>
+            <h2>Form Biodata</h2>
+            <form> <label for="nama">Nama</label>
+                <input type="text" id="nama" name="nama" required> <br><br> <label for="email">Email</label> <input
+                    type="email" id="email" name="email" required> <br><br> <label for="prodi">Program Studi</label>
+                <select id="prodi" name="prodi" required>
+                    <option value="">-- Pilih --</option>
                     <option value="ti">Teknik Informatika</option>
                     <option value="si">Sistem Informasi</option>
-                </select><br><br>
-
-                <label for="alamat_mhs">Alamat:</label><br>
-                <textarea id="alamat_mhs" name="alamat" required></textarea><br><br>
-
-                <button type="submit">Simpan</button>
-                <button type="reset">Reset</button>
+                </select> <br><br> <label for="alamat">Alamat</label><br> <textarea id="alamat" name="alamat"
+                    required></textarea> <br><br> <button type="submit">Simpan</button> <button
+                    type="reset">Reset</button>
             </form>
         </section>
-
-        <section id="media">
-            <h2>Sapaan Video</h2>
-            <video controls width="360">
-                <source src="media/video.mp4" type="video/mp4">
-                Browser tidak mendukung video.
-            </video>
-        </section>
     </main>
-
     <footer>
-        <p>&copy; 2026 Teknik Informatika - Universitas Pelita Bangsa</p>
+        <p>&copy; 2026 Teknik Informatika</p>
     </footer>
 </body>
+
 </html>
+
 ```
 
-**Capture Output:**
+## Jawaban Pertanyaan
 
-> ![Output Proyek Mini Biodata](./screenshots/ss8.png)
+1. Fungsi `<table>`, `<tr>`, `<th>`, dan `<td>`
 
----
+`<table>`: Membungkus dan membentuk seluruh elemen tabel.
 
-## Jawaban Pertanyaan Evaluasi
+`<tr>` (Table Row): Membuat satu baris baru di dalam tabel.
 
-**1. Apa fungsi `<table>`, `<tr>`, `<th>`, dan `<td>`?**  
-- `<table>`: Berfungsi sebagai kontainer utama untuk mendefinisikan struktur tabel.
-- `<tr>` (*Table Row*): Berfungsi untuk membuat baris di dalam tabel.
-- `<th>` (*Table Header*): Berfungsi mendefinisikan sel sebagai kepala kolom (secara default teks dicetak tebal dan rata tengah).
-- `<td>` (*Table Data*): Berfungsi mendefinisikan sel data standar di dalam baris.
+`<th>` (Table Header): Menandai sel sebagai header/judul kolom.
 
-**2. Apa perbedaan `<th>` dan `<td>`?**  
-`<th>` digunakan khusus untuk sel judul/header kolom yang membuat teks berformat tebal (*bold*) dan terpusat (*center*), sedangkan `<td>` digunakan untuk menampung nilai data biasa dengan tampilan teks normal rata kiri.
+`<td>` (Table Data): Menandai sel biasa yang berisi data atau isi tabel.
 
-**3. Apa fungsi `colspan` pada tabel?**  
-`colspan` (*column span*) berfungsi untuk menggabungkan dua atau lebih kolom horizontal menjadi satu sel besar.
+2. Perbedaan `<th>` dan `<td>`
 
-**4. Apa fungsi `<form>` dalam HTML?**  
-`<form>` berfungsi sebagai wadah untuk menampung elemen-elemen input interaktif guna mengumpulkan data dari pengguna dan mengirimkannya ke server.
+`<th>`: Teks otomatis dicetak tebal (bold) dan berada di tengah sel (center). Digunakan untuk nama kolom/kategori.
 
-**5. Apa perbedaan radio button dan checkbox?**  
-- **Radio Button:** Pengguna hanya dapat memilih **satu** opsi dari grup opsi yang tersedia.
-- **Checkbox:** Pengguna dapat memilih **beberapa** opsi sekaligus atau tidak memilih sama sekali dari daftar opsi yang ada.
+`<td>`: Teks berukuran normal dan berada di posisi rata kiri secara default. Digunakan untuk isi data.
 
-**6. Mengapa `<label>` sebaiknya terhubung dengan `id` input melalui atribut `for`?**  
-Agar meningkatkan aksesibilitas dan kemudahan navigasi pengguna. Ketika pengguna mengklik teks `<label>`, kursor/fokus browser akan otomatis mengaktifkan elemen `<input>` yang terhubung.
+3. Fungsi colspan pada Tabel
 
-**7. Apa perbedaan `<textarea>` dengan `input type="text"`?**  
-- `input type="text"` hanya menyediakan satu baris area pengisian teks pendek.
-- `<textarea>` menyediakan area pengisian teks multibaris yang lebarnya dan tingginya dapat disesuaikan untuk memasukkan paragraf atau teks yang panjang.
+Digunakan untuk menggabungkan beberapa kolom secara horizontal menjadi satu sel besar (seperti fitur Merge Cells di spreadsheet).
 
-**8. Apa fungsi semantic HTML seperti `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, dan `<footer>`?**  
-Fungsinya adalah untuk memberikan makna dan hierarki terstruktur pada halaman web, sehingga mesin pencari (SEO), browser, dan *screen reader* dapat memahami fungsi setiap blok halaman secara jelas.
+4. Fungsi <form> dalam HTML
 
-**9. Apa fungsi `required`, `min`, `max`, dan `minlength`?**  
-- `required`: Memastikan input tidak boleh dikosongkan saat dikirim.
-- `min`: Menentukan nilai minimum numerik/tanggal yang diizinkan.
-- `max`: Menentukan nilai maksimum numerik/tanggal yang diizinkan.
-- `minlength`: Menentukan jumlah panjang karakter minimum yang harus diketikkan.
+Berfungsi sebagai wadah untuk menampung elemen-elemen input (teks, pilihan, tombol) yang digunakan untuk mengumpulkan data dari pengguna lalu mengirimkannya ke server.
 
-**10. Apa perbedaan elemen `<audio>` dan `<video>`?**  
-- `<audio>` digunakan untuk memutar berkas suara saja (seperti MP3 atau WAV) tanpa tampilan visual selain kontrol pemutar audio.
-- `<video>` digunakan untuk memutar gambar bergerak berserta suara (seperti MP4 atau WebM) dan memerlukan area visual layar untuk merender datanya.
+5. Perbedaan Radio Button dan Checkbox
+
+Radio Button `(type="radio")`: Pengguna hanya bisa memilih satu dari beberapa opsi yang tersedia (misal: jenis kelamin).
+
+Checkbox `(type="checkbox")`: Pengguna bisa memilih satu, lebih dari satu, atau tidak memilih sama sekali dari daftar pilihan (misal: hobi atau keahlian).
+
+6. Alasan `<label>` Dihubungkan ke id Input via Atribut for
+
+Aksesibilitas & Pengalaman Pengguna: Membuat label dapat diklik. Ketika pengguna mengeklik teks label, kursor akan otomatis fokus ke dalam kolom input terkait (sangat berguna untuk pengguna HP atau screen reader).
+
+7. Perbedaan `<textarea>` dan Input type="text"
+
+Input type="text": Hanya menerima satu baris teks pendek (misal: nama lengkap).
+
+`<textarea>`: Menerima banyak baris teks panjang yang bisa di-scroll dan diubah ukurannya (misal: alamat lengkap atau pesan).
+
+8. Fungsi Elemen Semantic HTML
+
+`<header>`: Area kepala halaman web (berisi judul, logo, atau deskripsi).
+
+`<nav>`: Membungkus menu navigasi utama.
+
+`<main>`: Menampung konten utama yang unik dalam satu halaman.
+
+`<section>`: Mengelompokkan konten berdasarkan satu tema/topik tertentu.
+
+`<article>`: Membungkus konten mandiri yang utuh (seperti pengumuman, berita, atau postingan blog).
+
+`<aside>`: Membungkus konten sampingan/pelengkap yang tidak terkait langsung dengan konten utama (seperti sidebar).
+
+`<footer>`: Area kaki halaman web (berisi hak cipta, kontak, atau tautan tambahan).
+
+9. Fungsi required, min, max, dan minlength
+
+required: Memaksa kolom input wajib diisi sebelum form dikirim.
+
+min: Menentukan batas nilai angka atau tanggal minimum yang boleh diinput.
+
+max: Menentukan batas nilai angka atau tanggal maksimum yang boleh diinput.
+
+minlength: Menentukan jumlah karakter teks minimum yang harus diketik pengguna.
+
+10. Perbedaan Elemen `<audio>` dan `<video>`
+
+`<audio>`: Hanya memutar berkas suara (sound/music) tanpa area visual.
+
+`<video>`: Memutar berkas video lengkap dengan visual gambar bergerak dan suara, serta mendukung atribut tambahan seperti width, height, dan poster.
 
 ---
 
 ## Checklist Sebelum Dikumpulkan
 
-Berdasarkan checklist pada modul praktikum:
+Checklist Sebelum Dikumpulkan
 - [x] Tabel berhasil ditampilkan dan memiliki header yang sesuai.
 - [x] Form memiliki label dan beberapa jenis input.
 - [x] Radio button dan checkbox sudah digunakan.
@@ -465,5 +517,7 @@ Berdasarkan checklist pada modul praktikum:
 - [x] Semantic HTML sudah digunakan.
 - [x] Audio dan/atau video berhasil ditampilkan.
 - [x] Proyek mini biodata menggabungkan materi utama.
+- [x] Screenshot dan README.md sudah tersedia.
+- [x] Repository sudah di-commit dan URL siap dikirim.
 - [x] Screenshot dan README.md sudah tersedia.
 - [x] Repository sudah di-commit dan URL siap dikirim.
